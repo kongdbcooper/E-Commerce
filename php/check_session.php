@@ -1,11 +1,11 @@
 <?php
-session_start();
+
 header('Content-Type: application/json; charset=utf-8');
 require_once __DIR__ . '/db.php';
 
 if (isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
-    $stmt = $conn->prepare("SELECT id, username, email, first_name, last_name FROM users WHERE id = ?");
+    $stmt = $conn->prepare("SELECT id, usersname, email, fname, lname FROM users WHERE id = ?");
     $stmt->bind_param("i", $user_id);
     $stmt->execute();
     $result = $stmt->get_result();

@@ -6,7 +6,7 @@ try {
         throw new Exception("เชื่อมต่อฐานข้อมูลไม่สำเร็จ: " . $conn->connect_error);
     }
 } catch (Exception $error) {
-    die("ระบบขัดข้อง กรุณาลองใหม่ภายหลัง"); //. $error->getMessage());
+    die("ระบบขัดข้อง"); //. $error->getMessage());
 }
 
 ?> 

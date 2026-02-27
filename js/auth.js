@@ -239,7 +239,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         const response = await fetch('../php/check_session.php');
         const data = await response.json();
         
-        if (data.logged_in && data.user) {
+        if (data.logged_in&& data.user) {
             // Update navigation if needed
             updateNavigation(data.user);
         }

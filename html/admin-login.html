@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบแอดมิน - Pawland</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <div class="logo">🐾 Pawland Admin</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">🏠 หน้าแรก</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>🔐 เข้าสู่ระบบแอดมิน</h1>
+                <p>สำหรับจัดการสินค้าและโปรโมชันหลังบ้าน</p>
+            </div>
+
+            <form id="adminLoginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="adminUsername">ชื่อผู้ใช้แอดมิน</label>
+                    <input type="text" id="adminUsername" name="username" required autocomplete="username">
+                    <span class="error-message" id="adminUsernameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPassword">รหัสผ่าน</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="adminPassword" name="password" required autocomplete="current-password">
+                        <button type="button" class="toggle-password" onclick="togglePassword('adminPassword')">👁️</button>
+                    </div>
+                    <span class="error-message" id="adminPasswordError"></span>
+                </div>
+
+                <button type="submit" class="btn-auth btn-primary">เข้าสู่ระบบแอดมิน</button>
+
+                <div class="auth-links">
+                    <p>กลับไปหน้าลูกค้า <a href="login.html">เข้าสู่ระบบลูกค้า</a></p>
+                </div>
+            </form>
+
+            <div id="adminMessage" class="message"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pawland. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/admin-auth.js"></script>
+</body>
+</html>
+
