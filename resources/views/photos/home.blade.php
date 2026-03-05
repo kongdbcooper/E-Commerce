@@ -1,5 +1,6 @@
-<?php $__env->startSection('title', 'หน้าแรก'); ?>
-<?php $__env->startSection('content'); ?>
+@extends('layouts.layout')
+@section('title', 'หน้าแรก')
+@section('content')
     <section class="hero hero--nike" id="home">
         <div class="hero-pattern"></div>
 
@@ -15,8 +16,8 @@
                         <p class="hero-subtitle">สุนัขและแมวสุขภาพดี กับบริการที่ยอดเยี่ยม<br>พร้อมส่งตรงถึงบ้านทั่วประเทศ
                         </p>
                         <div class="btn-group">
-                            <a href="<?php echo e(Route('photos.index')); ?>" class="btn btn-primary">🛍️ เลือกซื้อสินค้า</a>
-                            <a href="<?php echo e(Route('photos.contact')); ?>" class="btn btn-secondary">💬 ติดต่อเรา</a>
+                            <a href="{{Route('photos.index')}}" class="btn btn-primary">🛍️ เลือกซื้อสินค้า</a>
+                            <a href="{{Route('photos.contact')}}" class="btn btn-secondary">💬 ติดต่อเรา</a>
                         </div>
                         <div class="hero-stats">
                             <div class="stat-item">
@@ -54,8 +55,8 @@
                         <h1>โปรเด็ดสำหรับน้องหมา & น้องแมว<br><span class="highlight">ลดสูงสุด 30%</span></h1>
                         <p class="hero-subtitle">อัปเดตสินค้าลดราคาใหม่ทุกสัปดาห์<br>ของมีจำนวนจำกัด รีบเลย!</p>
                         <div class="btn-group">
-                            <a href="<?php echo e(Route('photos.index')); ?>" class="btn btn-primary">🛍️ ไปดูสินค้าลดราคา</a>
-                            <a href="<?php echo e(Route('photos.contact')); ?>" class="btn btn-secondary">💬 สอบถามโปร</a>
+                            <a href="{{Route('photos.index')}}" class="btn btn-primary">🛍️ ไปดูสินค้าลดราคา</a>
+                            <a href="{{Route('photos.contact')}}" class="btn btn-secondary">💬 สอบถามโปร</a>
                         </div>
                     </div>
                 </div>
@@ -139,7 +140,7 @@
                     <h3>โปรโมชั่นพิเศษ!</h3>
                     <p>ซื้อครบ 1,000 บาท ส่งฟรีทั่วประเทศ + รับส่วนลดเพิ่ม 10%</p>
                 </div>
-                <a href="<?php echo e(Route('photos.index')); ?>" class="btn-promo">ดูโปรโมชั่น</a>
+                <a href="{{Route('photos.index')}}" class="btn-promo">ดูโปรโมชั่น</a>
             </div>
         </section>
 
@@ -209,13 +210,11 @@
                 <h2>พร้อมเริ่มต้นการเดินทางกับสัตว์เลี้ยงตัวใหม่แล้วหรือยัง?</h2>
                 <p>ค้นหาสัตว์เลี้ยงที่ใช่สำหรับคุณ หรือติดต่อเราสำหรับคำแนะนำ</p>
                 <div class="cta-buttons">
-                    <a href="<?php echo e(Route('photos.index')); ?>" class="btn btn-primary btn-large">🛍️ ดูสินค้าทั้งหมด</a>
-                    <a href="<?php echo e(Route('photos.contact')); ?>" class="btn btn-secondary btn-large">💬 ติดต่อเรา</a>
+                    <a href="{{Route('photos.index')}}" class="btn btn-primary btn-large">🛍️ ดูสินค้าทั้งหมด</a>
+                    <a href="{{Route('photos.contact')}}" class="btn btn-secondary btn-large">💬 ติดต่อเรา</a>
                 </div>
             </div>
         </section>
     </div>
     </div>
-<?php $__env->stopSection(); ?>
-
-<?php echo $__env->make('layouts.layout', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\xampp\htdocs\pawland\resources\views/photos/home.blade.php ENDPATH**/ ?>
+@endsection
