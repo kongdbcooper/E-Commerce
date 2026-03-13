@@ -36,9 +36,6 @@ COPY . .
 # คัดลอก .env.production เป็น .env สำหรับ production
 RUN if [ -f .env.production ]; then cp .env.production .env; fi
 
-# สร้าง APP_KEY ถ้ายังไม่มี
-RUN php artisan key:generate --force
-
 # ติดตั้ง Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader
 
