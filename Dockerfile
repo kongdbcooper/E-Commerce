@@ -22,7 +22,7 @@ RUN apk add --no-cache \
     shadow
 
 # ติดตั้ง PHP extensions ที่ Laravel ต้องใช้
-RUN docker-php-ext-install pdo pdo_pgsql mbstring zip intl xml
+RUN docker-php-ext-install pdo pdo_mysql mbstring zip intl xml
 
 # ติดตั้ง Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
