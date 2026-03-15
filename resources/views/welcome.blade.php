@@ -16,8 +16,8 @@
                         <p class="hero-subtitle">สุนัขและแมวสุขภาพดี กับบริการที่ยอดเยี่ยม<br>พร้อมส่งตรงถึงบ้านทั่วประเทศ
                         </p>
                         <div class="btn-group">
-                            <a href="products.html" class="btn btn-primary">🛍️ เลือกซื้อสินค้า</a>
-                            <a href="contact.html" class="btn btn-secondary">💬 ติดต่อเรา</a>
+                            <a href="{{ route('photos.index') }}" class="btn btn-primary">🛍️ เลือกซื้อสินค้า</a>
+                            <a href="{{ route('photos.contact') }}" class="btn btn-secondary">💬 ติดต่อเรา</a>
                         </div>
                         <div class="hero-stats">
                             <div class="stat-item">
@@ -42,7 +42,7 @@
                     <img src="../assets/pawland-promo-hero.png" alt="โปรโมชันพิเศษ ส่งฟรีเมื่อครบ ฿1,000 ลดเพิ่ม 10%"
                         loading="lazy" decoding="async">
                 </div>
-                <a class="hero-overlay hero-overlay--click" href="products.html" aria-label="ดูโปรโมชั่น"></a>
+                <a class="hero-overlay hero-overlay--click" href="{{ route('photos.index') }}" aria-label="ดูโปรโมชั่น"></a>
             </div>
 
             <div class="hero-slide">
@@ -55,8 +55,8 @@
                         <h1>โปรเด็ดสำหรับน้องหมา & น้องแมว<br><span class="highlight">ลดสูงสุด 30%</span></h1>
                         <p class="hero-subtitle">อัปเดตสินค้าลดราคาใหม่ทุกสัปดาห์<br>ของมีจำนวนจำกัด รีบเลย!</p>
                         <div class="btn-group">
-                            <a href="products.html" class="btn btn-primary">🛍️ ไปดูสินค้าลดราคา</a>
-                            <a href="contact.html" class="btn btn-secondary">💬 สอบถามโปร</a>
+                            <a href="{{ route('photos.index') }}" class="btn btn-primary">🛍️ ไปดูสินค้าลดราคา</a>
+                            <a href="{{ route('photos.contact') }}" class="btn btn-secondary">💬 สอบถามโปร</a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
             </div>
         </section>
 
-        <<section class="browse-section">
+        <section class="browse-section">
             <div class="section-header">
                 <h2 class="section-title">🐾 เลือกดูตามประเภท</h2>
                 <p class="section-subtitle">ค้นหาสิ่งที่คุณต้องการได้ง่ายๆ</p>
@@ -108,35 +108,34 @@
 
             <div class="browse-grid">
 
-                <a href="{{ route('products.index', ['category' => 'Food_dog']) }}" class="browse-card dog-card">
+                <a href="{{ route('photos.index', ['category' => 'Food_dog']) }}" class="browse-card dog-card">
                     <div class="browse-icon">🐕</div>
                     <h3>อาหารสุนัข</h3>
                     <p>อาหารสำหรับน้องสุนัข</p>
                     <span class="browse-link">ดูสินค้า →</span>
                 </a>
 
-                <a href="{{ route('products.index', ['category' => 'Food_cat']) }}" class="browse-card cat-card">
+                <a href="{{ route('photos.index', ['category' => 'Food_cat']) }}" class="browse-card cat-card">
                     <div class="browse-icon">🐱</div>
                     <h3>อาหารแมว</h3>
                     <p>อาหารสำหรับน้องแมว</p>
                     <span class="browse-link">ดูสินค้า →</span>
                 </a>
 
-                <a href="{{ route('products.index', ['category' => 'Toys_dog']) }}" class="browse-card food-card">
+                <a href="{{ route('photos.index', ['category' => 'Toys_dog']) }}" class="browse-card food-card">
                     <div class="browse-icon">🎾</div>
                     <h3>ของเล่นสุนัข</h3>
                     <p>ของเล่นสำหรับสุนัข</p>
                     <span class="browse-link">ดูสินค้า →</span>
                 </a>
 
-                <a href="{{ route('products.index', ['category' => 'Toys_cat']) }}" class="browse-card toy-card">
+                <a href="{{ route('photos.index', ['category' => 'Toys_cat']) }}" class="browse-card toy-card">
                     <div class="browse-icon">🧶</div>
                     <h3>ของเล่นแมว</h3>
                     <p>ของเล่นสำหรับแมว</p>
                     <span class="browse-link">ดูสินค้า →</span>
                 </a>
 
-            </div>
             </section>
 
             <section class="promo-banner">
@@ -146,7 +145,7 @@
                         <h3>โปรโมชั่นพิเศษ!</h3>
                         <p>ซื้อครบ 1,000 บาท ส่งฟรีทั่วประเทศ + รับส่วนลดเพิ่ม 10%</p>
                     </div>
-                    <a href="products.html" class="btn-promo">ดูโปรโมชั่น</a>
+                    <a href="{{ route('photos.index') }}" class="btn-promo">ดูโปรโมชั่น</a>
                 </div>
             </section>
 
@@ -227,6 +226,5 @@
                     </div>
                 </div>
             </section>
-    </div>
     </div>
 @endsection

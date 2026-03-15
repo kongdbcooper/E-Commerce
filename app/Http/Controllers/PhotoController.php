@@ -109,6 +109,11 @@ class PhotoController extends Controller
 
     public function edit(string $id)
     {
+        // ตรวจสอบว่าเป็น admin หรือไม่
+        if (Auth::user()->role !== 'admin') {
+            return redirect()->route('photos.home')->with('error', 'คุณไม่มีสิทธิ์เข้าถึงหน้านี้');
+        }
+
         $user = $this->userName();
         $types = $this->getTypes();
         $typeNames = $this->getTypeNames();
@@ -120,6 +125,11 @@ class PhotoController extends Controller
 
     public function update(Request $request, string $id)
     {
+        // ตรวจสอบว่าเป็น admin หรือไม่
+        if (Auth::user()->role !== 'admin') {
+            return redirect()->route('photos.home')->with('error', 'คุณไม่มีสิทธิ์เข้าถึงหน้านี้');
+        }
+
         $product = Product::findOrFail($id);
 
         $request->validate([
@@ -154,6 +164,11 @@ class PhotoController extends Controller
 
     public function destroy(string $id)
     {
+        // ตรวจสอบว่าเป็น admin หรือไม่
+        if (Auth::user()->role !== 'admin') {
+            return redirect()->route('photos.home')->with('error', 'คุณไม่มีสิทธิ์เข้าถึงหน้านี้');
+        }
+
         $product = Product::findOrFail($id);
 
         // ลบไฟล์รูปจาก R2

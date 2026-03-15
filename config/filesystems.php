@@ -66,6 +66,7 @@ return [
             'bucket' => env('R2_BUCKET'),
             'endpoint' => env('R2_ENDPOINT'),
             'use_path_style_endpoint' => true,
+            'public_url' => env('R2_PUBLIC_URL'),
         ],
 
     ],
