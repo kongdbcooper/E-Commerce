@@ -43,17 +43,14 @@ RUN composer install --no-dev --optimize-autoloader
 # Create SQLite database directory
 RUN mkdir -p /var/www/data && touch /var/www/data/database.sqlite
 
-# Cache Laravel config
-RUN php artisan config:cache
-
 # Run migrations
 RUN php artisan migrate --force
 
 # สร้าง symbolic link สำหรับ storage
 RUN php artisan storage:link
 
-# ล้าง cache
-RUN php artisan config:clear && php artisan cache:clear && php artisan view:clear
+# Clear cache
+RUN php artisan cache:clear && php artisan view:clear
 
 # สร้งโฟลเดอร์ public/build ว่างเพื่อให้ Vite ไม่ต้อง build
 RUN mkdir -p public/build && touch public/build/.gitkeep
