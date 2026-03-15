@@ -35,7 +35,7 @@ WORKDIR /var/www
 COPY . .
 
 # คัดลอก .env.production เป็น .env สำหรับ production
-RUN if [ -f .env.production ]; then cp .env.production .env; fi
+RUN cp .env.production .env
 
 # ติดตั้ง Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader
