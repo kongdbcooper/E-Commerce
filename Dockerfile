@@ -39,6 +39,9 @@ RUN if [ -f .env.production ]; then cp .env.production .env; fi
 # ติดตั้ง Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader
 
+# สร้าง symbolic link สำหรับ storage
+RUN php artisan storage:link
+
 # ติดตั้ง Node dependencies และ build front-end assets
 RUN npm install && npm run build
 
