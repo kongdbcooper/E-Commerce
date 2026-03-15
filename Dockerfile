@@ -42,6 +42,12 @@ RUN composer install --no-dev --optimize-autoloader
 # Cache Laravel config
 RUN php artisan config:cache
 
+# Run migrations
+RUN php artisan migrate --force
+
+# Seed admin user
+RUN php artisan db:seed --force --class=AdminUserSeeder
+
 # สร้าง symbolic link สำหรับ storage
 RUN php artisan storage:link
 
