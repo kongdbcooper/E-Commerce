@@ -15,7 +15,7 @@ Route::get('/products', [PhotoController::class, 'index'])->name('photos.index')
 
 Route::get('/dashboard', function () {
     return redirect()->route('photos.home');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware('auth')->name('dashboard');
 
 
 Route::middleware('auth')->group(function () {
