@@ -36,11 +36,11 @@ COPY . .
 # คัดลอก .env.production เป็น .env สำหรับ production
 RUN if [ -f .env.production ]; then cp .env.production .env; fi
 
-# Cache Laravel config
-RUN php artisan config:cache
-
 # ติดตั้ง Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader
+
+# Cache Laravel config
+RUN php artisan config:cache
 
 # สร้าง symbolic link สำหรับ storage
 RUN php artisan storage:link
