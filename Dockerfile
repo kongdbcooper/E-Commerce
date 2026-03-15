@@ -19,7 +19,8 @@ RUN apk add --no-cache \
     g++ \
     autoconf \
     bash \
-    shadow
+    shadow \
+    sqlite-dev
 
 # ติดตั้ง PHP extensions ที่ Laravel ต้องใช้
 RUN docker-php-ext-install pdo pdo_mysql pdo_sqlite mbstring zip intl xml
