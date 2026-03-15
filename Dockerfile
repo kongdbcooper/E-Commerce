@@ -42,8 +42,8 @@ RUN composer install --no-dev --optimize-autoloader
 # สร้าง symbolic link สำหรับ storage
 RUN php artisan storage:link
 
-# ติดตั้ง Node dependencies และ build front-end assets
-RUN npm install && npm run build
+# สร้งโฟลเดอร์ public/build ว่างเพื่อให้ Vite ไม่ต้อง build
+RUN mkdir -p public/build && touch public/build/.gitkeep
 
 # Expose port สำหรับ Laravel
 EXPOSE 8000
