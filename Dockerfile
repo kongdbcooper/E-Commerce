@@ -40,9 +40,6 @@ RUN cp .env.production .env
 # ติดตั้ง Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader
 
-# Create SQLite database directory
-RUN mkdir -p /var/www/data && touch /var/www/data/database.sqlite
-
 # Run migrations
 RUN php artisan migrate --force
 
