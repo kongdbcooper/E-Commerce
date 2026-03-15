@@ -134,7 +134,7 @@
                     data-price="{{ $item->price }}">
                     <button class="wishlist-btn" onclick="toggleWishlist({{ $item->id }}, this)">🤍</button>
 
-                    <img src="{{ asset($item->image_url) }}" alt="{{ $item->name }}">
+                    <img src="{{ $item->image_url }}" alt="{{ $item->name }}">
 
                     <div class="product-info">
                         <h3 class="product-name">{{ $item->name }}</h3>

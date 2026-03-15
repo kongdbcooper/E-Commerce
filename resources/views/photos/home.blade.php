@@ -109,28 +109,28 @@
 
     <div class="browse-grid">
 
-        <a href="{{ route('products.index', ['category' => 'Food_dog']) }}" class="browse-card dog-card">
+        <a href="{{ route('photos.index', ['category' => 'Food_dog']) }}" class="browse-card dog-card">
             <div class="browse-icon">🐕</div>
             <h3>อาหารสุนัข</h3>
             <p>อาหารสำหรับน้องสุนัข</p>
             <span class="browse-link">ดูสินค้า →</span>
         </a>
 
-        <a href="{{ route('products.index', ['category' => 'Food_cat']) }}" class="browse-card cat-card">
+        <a href="{{ route('photos.index', ['category' => 'Food_cat']) }}" class="browse-card cat-card">
             <div class="browse-icon">🐱</div>
             <h3>อาหารแมว</h3>
             <p>อาหารสำหรับน้องแมว</p>
             <span class="browse-link">ดูสินค้า →</span>
         </a>
 
-        <a href="{{ route('products.index', ['category' => 'Toys_dog']) }}" class="browse-card food-card">
+        <a href="{{ route('photos.index', ['category' => 'Toys_dog']) }}" class="browse-card food-card">
             <div class="browse-icon">🎾</div>
             <h3>ของเล่นสุนัข</h3>
             <p>ของเล่นสำหรับสุนัข</p>
             <span class="browse-link">ดูสินค้า →</span>
         </a>
 
-        <a href="{{ route('products.index', ['category' => 'Toys_cat']) }}" class="browse-card toy-card">
+        <a href="{{ route('photos.index', ['category' => 'Toys_cat']) }}" class="browse-card toy-card">
             <div class="browse-icon">🧶</div>
             <h3>ของเล่นแมว</h3>
             <p>ของเล่นสำหรับแมว</p>

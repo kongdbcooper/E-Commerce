@@ -331,7 +331,7 @@
                                         <td class="product-image-cell col-image">
                                             <div class="admin-product-thumb">
                                                 @if ($item->image)
-                                                <img src="{{ asset($item->image_url) }}" alt="{{ $item->name }}">
+                                                <img src="{{ $item->image_url }}" alt="{{ $item->name }}">
                                                 @else
                                                     <span>🐾</span>
                                                 @endif
