@@ -13,7 +13,7 @@ class PhotoController extends Controller
     private function userName()
     {
         return
-            Auth::user()->name; //ดึงชื่อ 
+            Auth::user()->name; //ดึงชื่อ
     }
 
     private function getTypes()
@@ -69,6 +69,11 @@ class PhotoController extends Controller
     }
     public function create()
     {
+        // ตรวจสอบว่าเป็น admin หรือไม่
+        if (Auth::user()->role !== 'admin') {
+            return redirect()->route('photos.home')->with('error', 'คุณไม่มีสิทธิ์เข้าถึงหน้านี้');
+        }
+
         $user = $this->userName();
         $types = $this->getTypes();
         $typeNames = $this->getTypeNames();

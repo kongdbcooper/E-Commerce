@@ -10,7 +10,7 @@ Route::resource('photos',PhotoController::class);
 Route::get('/',[HomeController::class, 'home'])->name('photos.home');
 Route::get('about',[PhotoController::class, 'about'])->name('photos.about');
 Route::get('contact',[PhotoController::class, 'contact'])->name('photos.contact');
-Route::get('create',[PhotoController::class, 'create'])->name('photos.create')->middleware(['auth', 'verified']);
+Route::get('create',[PhotoController::class, 'create'])->name('photos.create')->middleware('auth');
 Route::get('/products', [PhotoController::class, 'index'])->name('photos.index');
 
 Route::get('/dashboard', function () {
