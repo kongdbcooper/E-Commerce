@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title') | Pawland</title>
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/styles.css">
+    <link rel="stylesheet" href="{{ config('app.url') }}/css/products.css">
 </head>
-<script src="{{ asset('js/script.js') }}" defer></script>
-<script src="{{ asset('js/navigation.js') }}" defer></script>
+<script src="{{ config('app.url') }}/js/script.js" defer></script>
+<script src="{{ config('app.url') }}/js/navigation.js" defer></script>
 
 <body>
     <div>
