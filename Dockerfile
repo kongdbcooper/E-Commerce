@@ -22,7 +22,7 @@ RUN apk add --no-cache \
     shadow
 
 # ติดตั้ง PHP extensions ที่ Laravel ต้องใช้
-RUN docker-php-ext-install pdo pdo_mysql mbstring zip intl xml
+RUN docker-php-ext-install pdo pdo_mysql pdo_sqlite mbstring zip intl xml
 
 # ติดตั้ง Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
@@ -38,6 +38,9 @@ RUN if [ -f .env.production ]; then cp .env.production .env; fi
 
 # ติดตั้ง Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader
+
+# Create SQLite database directory
+RUN mkdir -p /var/www/data && touch /var/www/data/database.sqlite
 
 # Cache Laravel config
 RUN php artisan config:cache
